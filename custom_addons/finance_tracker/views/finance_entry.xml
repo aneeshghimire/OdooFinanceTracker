@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_finance_entry_form" model="ir.ui.view">
+            <field name="name">finance.entry.form</field>
+            <field name="model">finance.entry</field>
+            <field name="arch" type="xml">
+                <form string="Income and Expense Entry">
+                    <sheet>
+                        <group>
+                            <field name="title" string="Title"/>
+                            <field name="amount" string="Amount"/>
+                            <field name="entry_type" string="Entry Type"/>
+                            <field name="category_id" string="Enter Category"/>
+                            <field name="description" string="Description"/>
+                            <field name="date_time" string="Date and Time"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_finance_entry_tree" model="ir.ui.view">
+            <field name="name">finance.entry.tree</field>
+            <field name="model">finance.entry</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="description"/>
+                    <field name="category_id"/>
+                    <field name="date_time"/>
+                    <field name="entry_type" decoration-success="entry_type == 'income'" decoration-danger="entry_type == 'expense'" widget="badge"/>
+                    <field name="amount" decoration-success="entry_type == 'income'" decoration-danger="entry_type == 'expense'"/>
+                    <field name="balance"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_finance_entry" model="ir.actions.act_window">
+            <field name="name">Finance Entry</field>
+            <field name="res_model">finance.entry</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem
+        id="finance_menu_root"
+        name="Finance"/>
+
+        <menuitem
+            id="finance_menu_entry"
+            name="Finance Entries"
+            parent="finance_menu_root"
+            action="finance_tracker.action_finance_entry"
+        />
+        </data>
+</odoo>

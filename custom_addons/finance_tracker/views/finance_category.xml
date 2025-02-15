@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_finance_category_form" model="ir.ui.view">
+            <field name="name">finance.category.form</field>
+            <field name="model">finance.category</field>
+            <field name="arch" type="xml">
+                <form string="Finance Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="entry_type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for Finance Category -->
+        <record id="view_finance_category_tree" model="ir.ui.view">
+            <field name="name">finance.category.tree</field>
+            <field name="model">finance.category</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="entry_type"/>
+                </tree>
+            </field>
+        </record>
+            <record id="action_finance_category" model="ir.actions.act_window">
+            <field name="name">Finance Category</field>
+            <field name="res_model">finance.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem
+            id="finance_category_entry"
+            name="Finance Category"
+            parent="finance_menu_root"
+            action="finance_tracker.action_finance_category"
+        />
+    </data>
+</odoo>
+
+

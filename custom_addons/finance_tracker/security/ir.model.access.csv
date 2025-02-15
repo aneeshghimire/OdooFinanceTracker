@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_finance_entry_user,finance_entry_user,model_finance_entry,base.group_user,1,1,1,1
+access_finance_report_wizard,finance_report_wizard,model_finance_report_wizard,base.group_user,1,1,1,1
+access_finance.category,finance_category,finance_tracker.model_finance_category,base.group_user,1,1,1,1
