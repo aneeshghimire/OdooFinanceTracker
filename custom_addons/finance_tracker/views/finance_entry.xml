@@ -11,7 +11,7 @@
                             <field name="title" string="Title"/>
                             <field name="amount" string="Amount"/>
                             <field name="entry_type" string="Entry Type"/>
-                            <field name="category_id" string="Enter Category"/>
+                            <field name="category_id" string="Enter Category" options="{'no_create': True}"/>
                             <field name="description" string="Description"/>
                             <field name="date_time" string="Date and Time"/>
                         </group>
@@ -23,7 +23,7 @@
             <field name="name">finance.entry.tree</field>
             <field name="model">finance.entry</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree default_order="date_time desc">
                     <field name="title"/>
                     <field name="description"/>
                     <field name="category_id"/>

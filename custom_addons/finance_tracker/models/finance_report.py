@@ -5,9 +5,9 @@ class FinanceReport(models.Model):
     _name = 'finance.report'
     _description = 'Finance Report'
 
-    total_income = fields.Float(string="Total Income", compute="_compute_report", store=True)
-    total_expense = fields.Float(string="Total Expense", compute="_compute_report", store=True)
-    balance_comparison = fields.Char(string="Balance Comparison", compute="_compute_report", store=True)
+    total_income = fields.Float(string="Total Income", compute="_compute_report",store=True)
+    total_expense = fields.Float(string="Total Expense", compute="_compute_report",store=True)
+    balance_comparison = fields.Char(string="Balance Comparison", compute="_compute_report",store=True)
 
     @api.depends('total_income', 'total_expense')
     def _compute_report(self):

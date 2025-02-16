@@ -10,7 +10,7 @@
         "views/finance_entry.xml",
         "views/finance_category.xml",
         "views/summarized_report.xml",
-        "wizards/reports.xml"
+        "wizards/filtered_entries.xml"
     ],
     'installable': True,
     'application': True,

@@ -5,7 +5,7 @@ class FinanceEntry(models.Model):
     _description = 'Finance Entry'
 
     title = fields.Char(string="Title", required=True,default="Draft Transaction")
-    description = fields.Text(string="Description")
+    description = fields.Text(string="Description", default="...")
     amount = fields.Float(string="Amount", required=True,default=0.00)
 
     entry_type = fields.Selection([

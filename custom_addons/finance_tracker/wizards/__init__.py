@@ -1,1 +1,1 @@
-from . import finance_report_wizard
+from . import finance_filter_wizard

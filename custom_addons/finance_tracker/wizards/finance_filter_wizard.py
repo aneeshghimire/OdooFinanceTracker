@@ -2,8 +2,8 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 class FinanceReportWizard(models.TransientModel):
-    _name = 'finance.report.wizard'
-    _description = 'Finance Report Wizard'
+    _name = 'finance.filter.wizard'
+    _description = 'Finance Filter Wizard'
 
     entry_type = fields.Selection([
         ('income', 'Income'),
