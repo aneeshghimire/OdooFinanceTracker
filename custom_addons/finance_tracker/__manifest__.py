@@ -9,6 +9,7 @@
         "security/ir.model.access.csv",
         "views/finance_entry.xml",
         "views/finance_category.xml",
+        "views/summarized_report.xml",
         "wizards/reports.xml"
     ],
     'installable': True,

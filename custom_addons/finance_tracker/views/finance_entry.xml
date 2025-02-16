@@ -30,7 +30,6 @@
                     <field name="date_time"/>
                     <field name="entry_type" decoration-success="entry_type == 'income'" decoration-danger="entry_type == 'expense'" widget="badge"/>
                     <field name="amount" decoration-success="entry_type == 'income'" decoration-danger="entry_type == 'expense'"/>
-                    <field name="balance"/>
                 </tree>
             </field>
         </record>

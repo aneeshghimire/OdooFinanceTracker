@@ -25,10 +25,8 @@
         <field name="target">new</field>
     </record>
 
-    <menuitem id="finance_report_menu" name="Finance Report"
-              parent="finance_menu_root"/>
 
     <menuitem id="finance_record_filter" name="Filter Records"
               action="finance_report_wizard_action"
-              parent="finance_report_menu"/>
+              parent="finance_menu_root"/>
 </odoo>
